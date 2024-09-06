@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hip-Hop Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classical.html">CLASSICAL</a></li>
+            <li><a href="rock.html">ROCK</a></li>
+            <li><a href="hiphop.html">HIP-HOP</a></li>
+            <li><a href="dance.html">DANCE</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Hip-Hop Music</h1>
+        <div class="player">
+            <img src="assets/hiphop_music.gif" alt="Music" class="music-gif">
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="assets/hiphop1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="controls">
+                <button onclick="prevSong()">Previous</button>
+                <button onclick="nextSong()">Next</button>
+                <button onclick="volumeUp()">Volume Up</button>
+                <button onclick="volumeDown()">Volume Down</button>
+            </div>
+            <div class="playlist">
+                <button onclick="playSong('assets/hiphop1.mp3')">Play Song 1</button>
+                <button onclick="playSong('assets/hiphop2.mp3')">Play Song 2</button>
+                <button onclick="playSong('assets/hiphop3.mp3')">Play Song 3</button>
+                <!-- Add more songs as needed -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
