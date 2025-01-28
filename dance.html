@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <p id="msg"></p>
     <div class="menu-bar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="classical.html">CLASSICAL</a></li>
             <li><a href="rock.html">ROCK</a></li>
             <li><a href="hiphop.html">HIP-HOP</a></li>
@@ -21,11 +22,20 @@
     <div class="container">
         <h1>Dance Music</h1>
         <div class="player">
-            <img src="assets/dance_music.gif" alt="Music" class="music-gif">
-            <audio id="audioPlayer" controls>
-                <source id="audioSource" src="assets/dance1.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+            <div class="image-container">
+                <img id="songImage" src="assets/Dance/Brooklyn Blood Pop.jpg" alt="Music" class="music-gif">
+            </div>
+            <div>
+                <h3 id="songTitle">
+                    #BrooklynBloodPop! - SYKO
+                </h3>
+            </div>
+            <div class="audio-container">
+                <audio id="audioPlayer" controls>
+                    <source id="audioSource" src="assets/Dance/Brooklyn Blood Pop.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
             <div class="controls">
                 <button onclick="prevSong()">Previous</button>
                 <button onclick="nextSong()">Next</button>
@@ -33,13 +43,14 @@
                 <button onclick="volumeDown()">Volume Down</button>
             </div>
             <div class="playlist">
-                <button onclick="playSong('assets/dance1.mp3')">Play Song 1</button>
-                <button onclick="playSong('assets/dance2.mp3')">Play Song 2</button>
-                <button onclick="playSong('assets/dance3.mp3')">Play Song 3</button>
+                <button onclick="playSong('assets/Dance/Brooklyn Blood Pop.mp3','assets/Dance/Brooklyn Blood Pop.jpg','#BrooklynBloodPop! - SYKO')">Play Song 1</button>
+                <button onclick="playSong('assets/Dance/Lean On.mp3','assets/Dance/Lean On.jpg','Lean On - Major Lazor & DJ Snake Ft. MØ')">Play Song 2</button>
+                <button onclick="playSong('assets/Dance/STAY.mp3','assets/Dance/STAY.jpg','STAY - The Kid LAROI, Justin Bieber')">Play Song 3</button>
                 <!-- Add more songs as needed -->
             </div>
         </div>
-    </div>
+    </div> 
+    
     <script src="script.js"></script>
 </body>
 </html>

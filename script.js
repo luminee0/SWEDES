@@ -6,12 +6,16 @@ const songs = [
     'assets/song3.mp3'
 ];
 
-function playSong(song) {
+function playSong(song,image,title) {
     const audioPlayer = document.getElementById('audioPlayer');
     const audioSource = document.getElementById('audioSource');
     audioSource.src = song;
     audioPlayer.load();
     audioPlayer.play();
+    const songImage = document.getElementById('songImage');
+    songImage.src = image;
+    const titleElement = document.getElementById('songTitle');
+    titleElement.textContent = title;
 }
 
 function nextSong() {
