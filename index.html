@@ -10,7 +10,7 @@
 <body>
     <div class="menu-bar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="classical.html">CLASSICAL</a></li>
             <li><a href="rock.html">ROCK</a></li>
             <li><a href="hiphop.html">HIP-HOP</a></li>
@@ -19,8 +19,35 @@
     </div>
 
     <div class="container">
-        <h1>Welcome to the Music Player Website</h1>
-        <p>Enjoy your favorite songs and learn more about us!</p>
+        <h1 class="main">SONIQ</h1>
+        <p class="description">Dive into the world of music and discover the unique characteristics of different genres. From the timeless compositions of classical music to the energetic beats of dance, there's something for everyone.</p>
+        <p class="description2">Click on a genre below to explore!</p>
+        <div class="card-container">
+            <div class="card" onclick="window.location.href='classical.html'">
+                <img src="assets/cards/Classical music.png" alt="Image 1" class="card-image">
+                <div>
+                    <h3 class="card-title">Classical</h3>
+                </div>
+                <div>
+                    <p class="card-text">Classical music is a genre that has had a profound impact on our society and culture, with a rich history spanning from medieval and renaissance music to the modern era.</p>
+                </div>
+            </div>
+            <div class="card" onclick="window.location.href='rock.html'">
+                <img src="assets/cards/rock music.png" alt="Image 2" class="card-image">
+                <h3 class="card-title">Rock</h3>
+                <p class="card-text">Rock genre of music emerged in the 1950s and can be defined as “a form of music with a strong beat”—it is difficult to be much more precise. It is also called rock and roll.</p>
+            </div>
+            <div class="card" onclick="window.location.href='hiphop.html'">
+                <img src="assets/cards/hiphop music.jpg" alt="Image 3" class="card-image">
+                <h3 class="card-title">Hip-Hop</h3>
+                <p class="card-text">Hip Hip-Hop is a genre of music most often characterized by a strong, rhythmic beat and a rapping vocal track.</p>
+            </div>
+            <div class="card" onclick="window.location.href='dance.html'">
+                <img src="assets/cards/edm.jpg" alt="Image 4" class="card-image">
+                <h3 class="card-title">Dance</h3>
+                <p class="card-text">Electronic dance music (EDM), also referred to as dance music, is a broad range of percussive electronic music genres originally made for nightclubs, raves, and festivals.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
