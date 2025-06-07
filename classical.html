@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="animated-bg">
+        <div class="bg-layer-1"></div>
+        <div class="bg-layer-2"></div>
+        <div class="bg-layer-3"></div>
+    </div>
+
     <div class="menu-bar">
         <ul>
             <li><a href="index.html">HOME</a></li>
@@ -20,31 +26,71 @@
     <div class="music-container">
         <h1>Classical Music</h1>
         <div class="player">
-            <div class="image-container">
-                <img id="songImage" src="assets/Classical/fur-elise.jpg" alt="Music" class="music-gif">
+            <div class="player-main">
+                <div class="image-container">
+                    <div class="image-glow"></div>
+                    <img id="songImage" src="assets/Classical/fur-elise.jpg" alt="Music" class="music-gif">
             </div>
-            <div>
+            <div class="song-info">
                 <h3 id="songTitle">
                     Fur Elise - Beethoven
                 </h3>
             </div>
-            <div class="audio-container">
-                <audio id="audioPlayer" controls>
-                    <source id="audioSource" src="assets/Classical/fur-elise.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="controls">
-                <button onclick="prevSong()">Previous</button>
-                <button onclick="nextSong()">Next</button>
-                <button onclick="volumeUp()">Volume Up</button>
-                <button onclick="volumeDown()">Volume Down</button>
-            </div>
-            <div class="playlist">
-                <button onclick="playSong('assets/Classical/fur-elise.mp3','assets/Classical/fur-elise.jpg','Fur Elise - Beethoven')">Play Song 1</button>
-                <button onclick="playSong('assets/Classical/rondo-alla-turca.mp3','assets/Classical/rondo-alla-turca.png','Rondo Alla Turca - Mozart')">Play Song 2</button>
-                <button onclick="playSong('assets/Classical/moonlight-sonata.mp3','assets/Classical/moonlight-sonata.png','Moonlight Sonata, 3rd Movement - Beethoven')">Play Song 3</button>
-                <!-- Add more songs as needed -->
+        </div>
+
+        <div class="audio-container">
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="assets/Classical/fur-elise.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" onclick="prevSong()">
+                <span>⏮</span> Previous
+            </button>
+            <button class="control-btn" onclick="nextSong()">
+                Next <span>⏭</span>
+            </button>
+            <button class="control-btn" onclick="volumeUp()">
+                <span>🔊</span> Volume Up
+            </button>
+            <button class="control-btn" onclick="volumeDown()">
+                <span>🔉</span> Volume Down
+            </button>
+        </div>
+    
+<div class="playlist">
+                <h3 class="playlist-title">Playlist</h3>
+                <div class="playlist-items">
+                    <button class="playlist-btn" onclick="playSong('#','https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg?auto=compress&cs=tinysrgb&w=400','Für Elise - Beethoven')">
+                        <div class="playlist-item">
+                            <img src="https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Song">
+                            <div class="playlist-info">
+                                <span class="song-name">Für Elise</span>
+                                <span class="artist-name">Beethoven</span>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="playlist-btn" onclick="playSong('#','https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg?auto=compress&cs=tinysrgb&w=400','Rondo Alla Turca - Mozart')">
+                        <div class="playlist-item">
+                            <img src="https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Song">
+                            <div class="playlist-info">
+                                <span class="song-name">Rondo Alla Turca</span>
+                                <span class="artist-name">Mozart</span>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="playlist-btn" onclick="playSong('#','https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg?auto=compress&cs=tinysrgb&w=400','Moonlight Sonata, 3rd Movement - Beethoven')">
+                        <div class="playlist-item">
+                            <img src="https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Song">
+                            <div class="playlist-info">
+                                <span class="song-name">Moonlight Sonata, 3rd Movement</span>
+                                <span class="artist-name">Beethoven</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     </div> 
